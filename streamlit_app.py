@@ -22,7 +22,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
-# Fruit values put into columns 
+# Get Fruit values response normalizaed and stored  into columns 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# Display table with fruit advice in column values.
+# Display table with fruit advice response normalized in column values.
 streamlit.dataframe(fruityvice_normalized)
