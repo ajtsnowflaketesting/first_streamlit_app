@@ -27,7 +27,7 @@ streamlit.dataframe(fruits_to_show)
 # fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 # streamlit.write('The user entered this fruit:&', fruit_choice)
 streamlit.header("Fruityvice Fruit Advice!")
-try
+try:
 fruit_choice = streamlit.text_input('What fruit would you like information about?')
 if not fruit_choice:
     streamlit.error ("Please select a fruit to get information"
